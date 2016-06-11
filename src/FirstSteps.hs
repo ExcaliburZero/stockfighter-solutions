@@ -2,8 +2,8 @@ module FirstSteps where
 
 import Network.Stockfighter.Trade
 
-performOrder :: APIKey -> IO String
-performOrder apikey = response
+performOrder :: APIKey -> IO ()
+performOrder apikey = putStrLn =<< response
   where response = requestOrder order apikey
         order  = Order {
             account   = "CAE46231117"
